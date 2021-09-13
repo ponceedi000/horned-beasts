@@ -12,12 +12,6 @@ function App() {
   );
 }
 
-class Header extends Component {
-  render() {
-    return <h1>I am a header</h1>
-  }
-}
-
 class Footer extends Component {
   render() {
     return <h1>I am a footer</h1>
