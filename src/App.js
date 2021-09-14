@@ -1,5 +1,6 @@
 import './App.css';
 // import { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Main />
       <Footer />
+      <button></button>
     </div>
   );
 }

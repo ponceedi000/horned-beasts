@@ -3,7 +3,7 @@ import { Component } from 'react';
 class Footer extends Component {
 
     render() {
-        return <h3>Author: Eddie Ponce</31>
+        return <h3>Author: Eddie Ponce</>
     }
 
 }
