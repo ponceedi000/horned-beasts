@@ -1,6 +1,8 @@
 import './App.css';
 import { Component } from 'react';
 import Header from './Header.js';
+import Main from './Main.js';
+import Footer from './Footer.js';
 
 function App() {
   return  (
@@ -12,23 +14,23 @@ function App() {
   );
 }
 
-class Footer extends Component {
-  render() {
-    return <h1>I am a footer</h1>
-  }
-}
+// class Footer extends Component {
+//   render() {
+//     return <h1>I am a footer</h1>
+//   }
+// }
 
-class Main extends Component {
-  //needs to know the title pass in somehow....
-  render() {
-    return (
-    <>
-    <h1>I am a Mai my message is {this.props.message} </h1>
-    <HornedBeast title={'Rhino'}/>
-    </>
-    )
-  }
-}
+// class Main extends Component {
+//   //needs to know the title pass in somehow....
+//   render() {
+//     return (
+//     <>
+//     <h1>I am a Mai my message is {this.props.message} </h1>
+//     <HornedBeast title={'Rhino'}/>
+//     </>
+//     )
+//   }
+// }
 
 class HornedBeast extends Component {
   render() {
