@@ -1,40 +1,21 @@
 import './App.css';
-import { Component } from 'react';
-import Header from './Header.js';
+// import { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './Components/Header.js';
+import Main from './Components/Main.js';
+import Footer from './Components/Footer.js';
 
 function App() {
   return  (
     <div>
       <Header />
-      <Main message={'Hi there'} />
+      <Main />
       <Footer />
+      
     </div>
   );
 }
 
-class Header extends Component {
-  render() {
-    return <h1>I am a header</h1>
-  }
-}
-
-class Footer extends Component {
-  render() {
-    return <h1>I am a footer</h1>
-  }
-}
-
-class Main extends Component {
-  //needs to know the title pass in somehow....
-  render() {
-    return (
-    <>
-    <h1>I am a Mai my message is {this.props.message} </h1>
-    <HornedBeast title={'Rhino'}/>
-    </>
-    )
-  }
-}
 
 class HornedBeast extends Component {
   render() {
