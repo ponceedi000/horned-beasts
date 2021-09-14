@@ -1,17 +1,16 @@
 import { Component } from 'react';
-import markhor from './img/markhor.jpg';
-import saiga from './img/saiga.jpg';
+import markhor from '../img/markhor.jpg';
+import saiga from '../img/saiga.jpg';
 
 
 class Main extends Component {
-    render() {
-        
+    render() {       
         return( 
         <> 
-        <HorenBeast title={'Markhor'} imgURL={'markhor'} description={'Lives in the mountains of central Asia'}/>
-        <HorenBeast title={'Saiga'} imgURL={'saiga'} description={'Native to the dusty steppes of Kazakhstan, Russia'}/>
+        <HornedBeast title={'Markhor'} imgURL={markhor} description={'Lives in the mountains of central Asia'}/>
+        <HornedBeast title={'Saiga'} imgURL={saiga} description={'Native to the dusty steppes of Kazakhstan, Russia'}/>
         </>
-            )
+         )
     }
 }
 
