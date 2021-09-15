@@ -1,3 +1,43 @@
+# LAB - 02
+
+## Horned Beasts
+
+I build a React app that renders Horned Animals
+
+### Author: Ediberto Ponce
+
+### Links and Resources
+
+* [submission PR](http://xyz.com)
+* Any Links you used as reference
+
+### Reflections and Comments
+
+* I'm excited to learn more about React!
+
+# Features Info
+
+### Feature #1: Display images
+
+* Estimate of time needed to complete: 1 hour
+* Start time: _____
+* Finish time: _____
+* Actual time needed to complete: _____
+
+### Feature #2: Allow users to vote for their favorite beast
+
+* Estimate of time needed to complete:
+* Start time: _____
+* Finish time: _____
+* Actual time needed to complete: _____
+
+### Feature 3: Bootstrap
+
+* Estimate of time needed to complete: _____
+* Start time: 6:pm
+* Finish time: _____
+* Actual time needed to complete: _____
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,9 +1,22 @@
 import { Component } from 'react';
+import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
 
 class Footer extends Component {
 
     render() {
-        return <h3>Author: Eddie Ponce</h3>
+        return (
+            <>
+                <Navbar bg="dark" variant="dark">
+                    <Container>
+                        <Navbar.Brand>
+
+                            {this.props.text}
+                        </Navbar.Brand>
+                    </Container>
+                </Navbar>
+            </>
+        );
     }
 
 }
