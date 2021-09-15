@@ -1,30 +1,62 @@
-import { Component } from 'react';
-import markhor from '../img/markhor.jpg';
-import saiga from '../img/saiga.jpg';
-
+import { Component } from 'react'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Image from 'react-bootstrap/Image'
 
 class Main extends Component {
-    render() {       
-        return( 
-        <> 
-        <HornedBeast title={'Markhor'} imgURL={markhor} description={'Lives in the mountains of central Asia'}/>
-        <HornedBeast title={'Saiga'} imgURL={saiga} description={'Native to the dusty steppes of Kazakhstan, Russia'}/>
-        </>
-         )
-    }
-}
+    render() {  
+        
+        const bios = this.props.HornedBeast;
 
-class HornedBeast extends Component {
-    render() {
         return (
-            <>
-            <h2>This horned beast is known as {this.props.title}</h2>
-            <img src={this.props.imgURL} alt='hornedBeast_img' title={this.props.title} />
-            <p>{this.props.description}</p>
-            </>
-        )
-    }
-}
+            <Container>
+              <h2>{this.props.message}</h2>
+
+        <Row>
+            <Col><BeastImage bio={bios[0]} /></Col>
+            <Col><BeastImage bio={bios[1]} /></Col>
+        </Row>
+
+        <Row>
+            <Col><BeastImage bio={bios[2]} /></Col>
+            <Col><BeastImage bio={bios[3]} /></Col>
+        </Row>
+
+        <Row>
+            <Col><BeastImage bio={bios[4]} /></Col>
+            <Col><BeastImage bio={bios[5]} /></Col>
+        </Row>
+      
+            </Container>
+          );
+        }
+      }
+      class BeastImage extends Component {
+
+        constructor(props) {
+          super(props);
+          this.state = {
+            status: "Like"
+          }
+        }
+      
+        handleClick = (event) => {
+          // toggle the status between Yay and Nay
+          this.setState({
+            status: this.state.status === "Like" ? "Dislike" : "Like"
+          });
+        }
+      
+        render() {
+          return (
+            <div>
+              <Image onClick={this.handleClick} src={this.props.bio.image_url} alt="some horned beast" rounded fluid />
+              <h3>{this.state.status}</h3>
+            </div>
+          )
+        }
+      }
 
 
 export default Main;

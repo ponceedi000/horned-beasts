@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
-class Header extends Component {
 
+class Header extends Component {
     render() {
         return (
             <>
@@ -10,7 +10,7 @@ class Header extends Component {
                     <Container>
                         <Navbar.Brand>
 
-                            {this.props.text}
+                            {this.props.title}
                         </Navbar.Brand>
                     </Container>
                 </Navbar>
