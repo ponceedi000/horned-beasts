@@ -12,15 +12,20 @@ class Main extends Component {
         return (
             <Container>
               <h2>{this.props.message}</h2>
-              <Row>
-          <Col><BeastImage bio={bios[0]} /></Col>
-          <Col><BeastImage bio={bios[1]} /></Col>
-          <Col><BeastImage bio={bios[2]} /></Col>
-        </Row>
+
         <Row>
-          <Col><BeastImage bio={bios[3]} /></Col>
-          <Col><BeastImage bio={bios[4]} /></Col>
-          <Col><BeastImage bio={bios[5]} /></Col>
+            <Col><BeastImage bio={bios[0]} /></Col>
+            <Col><BeastImage bio={bios[1]} /></Col>
+        </Row>
+
+        <Row>
+            <Col><BeastImage bio={bios[2]} /></Col>
+            <Col><BeastImage bio={bios[3]} /></Col>
+        </Row>
+
+        <Row>
+            <Col><BeastImage bio={bios[4]} /></Col>
+            <Col><BeastImage bio={bios[5]} /></Col>
         </Row>
       
             </Container>
@@ -32,14 +37,14 @@ class Main extends Component {
         constructor(props) {
           super(props);
           this.state = {
-            status: "Yay"
+            status: "Like"
           }
         }
       
         handleClick = (event) => {
           // toggle the status between Yay and Nay
           this.setState({
-            status: this.state.status === "Yay" ? "Nay" : "Yay"
+            status: this.state.status === "Like" ? "Dislike" : "Like"
           });
         }
       
