@@ -38,6 +38,13 @@ I built a React app that renders Horned Animals. More changes to come by the end
 * Finish time: 6:30pm
 * Actual time needed to complete: 30 minutes
 
+### Feature 4: Display a Modal
+
+* Estimate of time needed to complete: 3 hours
+* Start time: 2:00pm
+* Finish time: ______
+* Actual time needed to complete:______
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
