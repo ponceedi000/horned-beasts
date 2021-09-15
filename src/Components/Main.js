@@ -3,7 +3,6 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import BeastImage from './BeastImage'
-//import Image from 'react-bootstrap/Image'
 
 class Main extends Component {
     render() {  
@@ -15,7 +14,7 @@ class Main extends Component {
               <h2>{this.props.message}</h2>
 
         <Row>
-            <Col><BeastImage bio={bios[0]} /></Col>
+            <Col><BeastImage bio={bios[0]}/></Col>
             <Col><BeastImage bio={bios[1]} /></Col>
         </Row>
 

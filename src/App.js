@@ -6,7 +6,7 @@ import Header from './Components/Header.js';
 import Main from './Components/Main.js';
 import Footer from './Components/Footer.js';
 import HornedBeast from './data.json';
-import SelectedBeast from './Components/SelectedBeast';
+//import SelectedBeast from './Components/SelectedBeast';
 
 function App() {
   return  (

@@ -1,12 +1,13 @@
 import Image from 'react-bootstrap/Image'
 import { Component } from 'react'
-
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 class BeastImage extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      status: "Like"
+      status: "Vote"
     }
   }
 
@@ -19,10 +20,16 @@ class BeastImage extends Component {
 
   render() {
     return (
-      <div>
-        <Image onClick={this.handleClick} src={this.props.bio.image_url} alt="some horned beast" rounded fluid />
-        <h3>{this.state.status}</h3>
-      </div>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src={this.props.bio.image_url} />
+        <Card.Body>
+          <Card.Title>{this.props.bio.title}</Card.Title>
+          <Card.Text>
+            {this.props.bio.description}
+          </Card.Text>
+          <Button onClick={this.handleClick} variant="primary">{this.state.status}</Button>
+        </Card.Body>
+      </Card>
     )
   }
 }
