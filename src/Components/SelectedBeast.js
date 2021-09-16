@@ -1,5 +1,4 @@
 import { Component } from 'react'
-import BeastImage from './BeastImage';
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button';
 
@@ -7,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 class SelectedBeast extends Component {
   render() {
+    // console.log(this.props)
     return (
       <Modal show={this.props.show} onHide={this.props.closeModal}>
         <Modal.Dialog>
@@ -16,7 +16,7 @@ class SelectedBeast extends Component {
 
           <Modal.Body>
 
-            <img src={this.props.selectedBeast.image_url} className="img-fluid"></img>
+            <img src={this.props.selectedBeast.image_url} className="img-fluid" alt={''}></img>
 
           </Modal.Body>
 

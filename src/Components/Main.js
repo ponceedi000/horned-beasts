@@ -9,7 +9,7 @@ class Main extends Component {
     render() {  
         
         const bios = this.props.hornedBeast;
-
+         //console.log(this.props.hornedBeast)
         return (
             <Container>
               <h2>{this.props.message}</h2>
