@@ -1,13 +1,21 @@
-import Image from 'react-bootstrap/Image'
-import { Component } from 'react'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+//import Image from 'react-bootstrap/Image';
+import { Component } from 'react';
+import SelectedBeast from './SelectedBeast';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import BeastData from '../data.json'
+
+
+
 class BeastImage extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      status: "Vote"
+      status: "Vote", 
+      show: false,  
+      selectedBeast: {},
+      data: BeastData   
     }
   }
 
@@ -16,12 +24,31 @@ class BeastImage extends Component {
     this.setState({
       status: this.state.status === "Like" ? "Dislike" : "Like"
     });
+    this.openModal(this.props.bio.title)
   }
 
+  openModal = (name) => {
+    const selectedBeast = BeastData.find(beast => beast.title === name);
+    this.setState ({
+      show: true,
+      selectedBeast 
+    })
+  }
+
+  closeModal = () => {
+    this.setState ({
+     show: false 
+    })
+  }
+
+
+
   render() {
+    console.log(this.props.bio)
     return (
+      <div>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={this.props.bio.image_url} />
+        <Card.Img variant="top" src={this.props.bio.image_url}/>
         <Card.Body>
           <Card.Title>{this.props.bio.title}</Card.Title>
           <Card.Text>
@@ -30,6 +57,8 @@ class BeastImage extends Component {
           <Button onClick={this.handleClick} variant="primary">{this.state.status}</Button>
         </Card.Body>
       </Card>
+      <SelectedBeast closeModal={this.closeModal} show={this.state.show} selectedBeast ={this.state.selectedBeast}/>
+      </div>
     )
   }
 }
