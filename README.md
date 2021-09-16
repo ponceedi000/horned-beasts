@@ -8,8 +8,8 @@ I built a React app that renders Horned Animals. More changes to come by the end
 
 ### Links and Resources
 
-* [submission PR](http://xyz.com)
-* Any Links you used as reference
+* [react-bootstrap](https://react-bootstrap.github.io/)
+* [MDN](https://developer.mozilla.org/en-US/)
 
 ### Reflections and Comments
 
@@ -42,8 +42,8 @@ I built a React app that renders Horned Animals. More changes to come by the end
 
 * Estimate of time needed to complete: 3 hours
 * Start time: 2:00pm
-* Finish time: ______
-* Actual time needed to complete:______
+* Finish time: 7:05pm
+* Actual time needed to complete: 5 hours
 
 # Getting Started with Create React App
 
