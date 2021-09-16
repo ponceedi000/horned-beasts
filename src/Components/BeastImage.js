@@ -12,7 +12,8 @@ class BeastImage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      status: "Vote", 
+      status: 'Vote', 
+      votes: 0,
       show: false,  
       selectedBeast: {},
       data: BeastData   
@@ -22,7 +23,8 @@ class BeastImage extends Component {
   handleClick = (event) => {
     // toggle the status between Yay and Nay
     this.setState({
-      status: this.state.status === "Like" ? "Dislike" : "Like"
+      votes: this.state.votes + 1
+      
     });
     this.openModal(this.props.bio.title)
   }
@@ -53,7 +55,7 @@ class BeastImage extends Component {
           <Card.Text>
             {this.props.bio.description}
           </Card.Text>
-          <Button onClick={this.handleClick} variant="primary">{this.state.status}</Button>
+          <Button onClick={this.handleClick} variant="primary">{this.state.status}: {this.state.votes} </Button>
         </Card.Body>
       </Card>
       <SelectedBeast closeModal={this.closeModal} show={this.state.show} selectedBeast ={this.state.selectedBeast}/>
