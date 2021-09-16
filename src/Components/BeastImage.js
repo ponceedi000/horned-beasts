@@ -44,7 +44,6 @@ class BeastImage extends Component {
 
 
   render() {
-    console.log(this.props.bio)
     return (
       <div>
       <Card style={{ width: '18rem' }}>
