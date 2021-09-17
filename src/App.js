@@ -7,7 +7,6 @@ import Main from './Components/Main.js';
 import Footer from './Components/Footer.js';
 import HornedBeast from './data.json';
 
-
 function App() {
   return  (
     <Container>

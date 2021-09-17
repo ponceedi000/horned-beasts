@@ -1,4 +1,3 @@
-//import Image from 'react-bootstrap/Image';
 import { Component } from 'react';
 import SelectedBeast from './SelectedBeast';
 import Card from 'react-bootstrap/Card';
@@ -6,13 +5,13 @@ import Button from 'react-bootstrap/Button';
 import BeastData from '../data.json'
 
 
-
 class BeastImage extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      status: "Vote", 
+      status: 'Vote', 
+      votes: 0,
       show: false,  
       selectedBeast: {},
       data: BeastData   
@@ -20,19 +19,19 @@ class BeastImage extends Component {
   }
 
   handleClick = (event) => {
-    // toggle the status between Yay and Nay
+    // add vote by increment of one
     this.setState({
-      status: this.state.status === "Like" ? "Dislike" : "Like"
+      votes: this.state.votes + 1     
     });
-    this.openModal(this.props.bio.title)
   }
 
-  openModal = (name) => {
-    const selectedBeast = BeastData.find(beast => beast.title === name);
+  openModal = () => {
+    const selectedBeast = this.props.bio;
     this.setState ({
       show: true,
-      selectedBeast 
+      selectedBeast: selectedBeast
     })
+    console.log(this.state.selectedBeast)
   }
 
   closeModal = () => {
@@ -41,19 +40,17 @@ class BeastImage extends Component {
     })
   }
 
-
-
   render() {
     return (
       <div>
       <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={this.props.bio.image_url}/>
+        <Card.Img variant="top" src={this.props.bio.image_url}  onClick={this.openModal} />
         <Card.Body>
           <Card.Title>{this.props.bio.title}</Card.Title>
           <Card.Text>
             {this.props.bio.description}
           </Card.Text>
-          <Button onClick={this.handleClick} variant="primary">{this.state.status}</Button>
+          <Button onClick={this.handleClick} variant="primary">{this.state.status}: {this.state.votes} </Button>
         </Card.Body>
       </Card>
       <SelectedBeast closeModal={this.closeModal} show={this.state.show} selectedBeast ={this.state.selectedBeast}/>

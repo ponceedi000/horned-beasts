@@ -9,7 +9,6 @@ class Header extends Component {
                 <Navbar bg="dark" variant="dark">
                     <Container>
                         <Navbar.Brand>
-
                             {this.props.title}
                         </Navbar.Brand>
                     </Container>
