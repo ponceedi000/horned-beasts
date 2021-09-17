@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 import BeastData from '../data.json'
 
 
-
 class BeastImage extends Component {
 
   constructor(props) {
@@ -26,7 +25,6 @@ class BeastImage extends Component {
     });
   }
 
-
   openModal = () => {
     const selectedBeast = this.props.bio;
     this.setState ({
@@ -41,8 +39,6 @@ class BeastImage extends Component {
      show: false 
     })
   }
-
-
 
   render() {
     return (

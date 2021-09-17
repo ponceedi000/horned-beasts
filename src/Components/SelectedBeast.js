@@ -15,9 +15,7 @@ class SelectedBeast extends Component {
           </Modal.Header>
 
           <Modal.Body>
-
             <img src={this.props.selectedBeast.image_url} className="img-fluid" alt={''}></img>
-
           </Modal.Body>
 
           <Modal.Footer>

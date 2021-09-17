@@ -2,7 +2,7 @@
 
 ## Horned Beasts
 
-I built a React app that renders Horned Animals. More changes to come by the end of this week.
+I built a React app that renders Horned Animals. This app allows a user to vote on their favorite animal, click on the image to view a Modal, and to utilize a form that can filter different categories.
 
 ### Author: Ediberto Ponce
 
@@ -44,6 +44,13 @@ I built a React app that renders Horned Animals. More changes to come by the end
 * Start time: 2:00pm
 * Finish time: 7:05pm
 * Actual time needed to complete: 5 hours
+
+### Feature 5: Filter by Numbers of Horns
+
+* Estimate of time needed to complete: 5 hours
+* Start time: 1:30pm
+* Finish time: 5:11pm
+* Actual time needed to complete: 3 hours 30 mins
 
 # Getting Started with Create React App
 

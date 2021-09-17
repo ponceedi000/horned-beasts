@@ -10,10 +10,7 @@ helperFunction = (e) => {
   this.props.handleSelect(numOfHorns)
 
 }
-
-
   render() {
-
 
     return (
       <Form.Select onChange={this.helperFunction} aria-label="Default select example">
